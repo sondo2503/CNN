@@ -154,7 +154,7 @@ def adamGD(batch, num_classes, lr, dim, n_c, beta1, beta2, params, cost):
 
 def train(num_classes=10, lr=0.01, beta1=0.95, beta2=0.99, img_dim=28, img_depth=1, f=5, num_filt1=8, num_filt2=8,
           batch_size=32, num_epochs=2, save_path='params.pkl'):
-    # training data
+    # we have 50k training example
     m = 50000
     X = extract_data('train-images-idx3-ubyte.gz', m, img_dim)
     y_dash = extract_label('train-labels-idx1-ubyte.gz', m).reshape(m, 1)
